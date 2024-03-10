@@ -1,0 +1,24 @@
+{
+  "name": "fluent-interface-colors",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "JavaScript fluent interface pattern implementation done with coloring for console messages",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bartosz-Pilarski/fluent-interface-colors.git"
+  },
+  "author": "Bartosz Pilarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bartosz-Pilarski/fluent-interface-colors/issues"
+  },
+  "homepage": "https://github.com/Bartosz-Pilarski/fluent-interface-colors#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
