@@ -1,7 +1,5 @@
 import Colors from "./src/colors.js"
 
-const colors = new Colors()
+const colors = new Colors("Hello world")
 
-colors.hello().world()
-
-//console.log(`\x1b[31mahoy`)
+colors.red().underline().render().log("Oh, okay").underline().render()

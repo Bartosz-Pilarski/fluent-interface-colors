@@ -1,11 +1,22 @@
 export default function(message) {
   this.currentMessage = message
-  this.hello = () => {
-    console.log("hello")
+
+  this.red = () => {
+    this.currentMessage = `\x1b[31m${this.currentMessage}`
     return this
   }
-  this.world = () => {
-    console.log("world")
+  this.underline = () => {
+    this.currentMessage = `\x1b[4m${this.currentMessage}`
+    return this
+  }
+  //Change message
+  this.log = (newMessage) => {
+    this.currentMessage = newMessage
+    return this
+  }
+  //Display message
+  this.render = () => {
+    console.log(`${this.currentMessage}\x1b[0m`)
     return this
   }
 }
