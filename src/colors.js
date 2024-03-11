@@ -41,11 +41,19 @@ export default function() {
     this.stylePrefix = ''
     return this
   }
+  //lock in current message without resetting styles
+  this.and = (newMessage) => {
+    this.currentMessage = newMessage
+    this.message += `${this.stylePrefix}${this.currentMessage}\x1b[0m`
+    return this
+  }
+  
   //finalize message and render
   this.log = (newMessage) => {
     this.currentMessage = newMessage
     console.log(`${this.message}${this.stylePrefix}${this.currentMessage}\x1b[0m`)
     this.stylePrefix = ''
+    this.message = ''
     return this
   }
 }
