@@ -28,6 +28,8 @@ Start logging messages
 ```javascript
 colors.red().bold().log("Hello world!")
 ```
+![preview](https://github.com/Bartosz-Pilarski/fluent-interface-colors/assets/86968046/8c865c25-0c16-4cb4-890f-2f00b50d462d)
+
 To use multiple styles per line simply use the .then(message) and .and(message) methods
 ```javascript
 //Reset style for the next segment
