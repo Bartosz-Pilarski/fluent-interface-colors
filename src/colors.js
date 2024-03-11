@@ -1,17 +1,21 @@
-export default function(message) {
-  this.currentMessage = message
+export default function() {
+  this.currentMessage = ''
+  this.stylePrefix = ''
 
   this.red = () => {
-    this.currentMessage = `\x1b[31m${this.currentMessage}`
+    this.stylePrefix += '\x1b[31m'
     return this
   }
   this.underline = () => {
-    this.currentMessage = `\x1b[4m${this.currentMessage}`
+    this.stylePrefix += '\x1b[4m'
     return this
   }
-  //Change message
+
+  //define message and render
   this.log = (newMessage) => {
     this.currentMessage = newMessage
+    console.log(`${this.stylePrefix}${this.currentMessage}\x1b[0m`)
+    this.stylePrefix = ''
     return this
   }
   //Display message
