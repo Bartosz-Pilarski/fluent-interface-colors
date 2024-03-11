@@ -4,3 +4,5 @@ const colors = new Colors()
 
 colors.italic().blue().log("Hello world")
 colors.bold().underline().log("Reusability")
+
+colors.red().then("yahoy").blue().log("yahey")

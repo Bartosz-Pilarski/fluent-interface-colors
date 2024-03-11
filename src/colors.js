@@ -19,6 +19,9 @@ const colors = {
 }
 
 export default function() {
+  //message history stack
+  this.message = ''
+  //message currently styled
   this.currentMessage = ''
   this.stylePrefix = ''
 
@@ -30,10 +33,18 @@ export default function() {
     }
   })
 
-  //define message and render
+  //lock in current styling and reset styles for the next message
+  //doesn't include space for separation
+  this.then = (newMessage) => {
+    this.currentMessage = newMessage
+    this.message += `${this.stylePrefix}${this.currentMessage}\x1b[0m`
+    this.stylePrefix = ''
+    return this
+  }
+  //finalize message and render
   this.log = (newMessage) => {
     this.currentMessage = newMessage
-    console.log(`${this.stylePrefix}${this.currentMessage}\x1b[0m`)
+    console.log(`${this.message}${this.stylePrefix}${this.currentMessage}\x1b[0m`)
     this.stylePrefix = ''
     return this
   }
