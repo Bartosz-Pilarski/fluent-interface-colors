@@ -4,7 +4,7 @@
 This is a small educational project that:
 - Styles and colorizes terminal messages in node.js using ANSI codes,
 - Implements a fluent API pattern for simplicity of use,
-- Allows easy nested styling of console messages.
+- Allows easy chained styling of console messages.
 
 **Not all possible features are implemented (yet, anyways) - this project is not meant as a replacement for established libraries** 
 ...but I won't stop anyone from trying to use it anyways.
@@ -28,7 +28,7 @@ Start logging messages
 ```javascript
 colors.red().bold().log("Hello world!")
 ```
-![preview](https://github.com/Bartosz-Pilarski/fluent-interface-colors/assets/86968046/8c865c25-0c16-4cb4-890f-2f00b50d462d)
+![preview](https://github.com/Bartosz-Pilarski/fluent-interface-colors/assets/86968046/494fadb9-2a6e-4464-8b13-b498d448bc5b)
 
 To use multiple styles per line simply use the .then(message) and .and(message) methods
 ```javascript
