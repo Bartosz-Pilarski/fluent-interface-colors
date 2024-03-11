@@ -40,7 +40,7 @@ export default function() {
   }
   //Lock in current message and styling without resetting styles
   this.and = (newMessage) => {
-    message += `${stylePrefix}${newMessage}\x1b[0m`
+    message += `${stylePrefix}${newMessage}`
     return this
   }
   
