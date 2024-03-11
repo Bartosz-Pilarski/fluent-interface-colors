@@ -12,9 +12,9 @@ This is a small educational project that:
 - [x] Core text colors,
 - [x] Core text styling (bold, italic, strikethrough...),
 - [x] Multiple styles/colors per line,
-- [ ] Additional color codes,
-  - [ ] Background colors
-  - [ ] Bold colors
+- [x] Additional color codes,
+  - [x] Background colors
+  - [x] Bold colors
 - [ ] ()-less syntax
 
 ## Usage
