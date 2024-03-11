@@ -20,15 +20,15 @@ const colors = {
 
 export default function() {
   //message history stack
-  this.message = ''
+  let message = ''
   //message currently styled
-  this.currentMessage = ''
-  this.stylePrefix = ''
+  let currentMessage = ''
+  let stylePrefix = ''
 
   //Define color functions on the fly
   Object.keys(colors).forEach((key) => {
     this[key] = () => {
-      this.stylePrefix += colors[key]
+      stylePrefix += colors[key]
       return this
     }
   })
@@ -36,24 +36,24 @@ export default function() {
   //lock in current styling and reset styles for the next message
   //doesn't include space for separation
   this.then = (newMessage) => {
-    this.currentMessage = newMessage
-    this.message += `${this.stylePrefix}${this.currentMessage}\x1b[0m`
-    this.stylePrefix = ''
+    currentMessage = newMessage
+    message += `${stylePrefix}${currentMessage}\x1b[0m`
+    stylePrefix = ''
     return this
   }
   //lock in current message without resetting styles
   this.and = (newMessage) => {
-    this.currentMessage = newMessage
-    this.message += `${this.stylePrefix}${this.currentMessage}\x1b[0m`
+    currentMessage = newMessage
+    message += `${stylePrefix}${currentMessage}\x1b[0m`
     return this
   }
   
   //finalize message and render
   this.log = (newMessage) => {
-    this.currentMessage = newMessage
-    console.log(`${this.message}${this.stylePrefix}${this.currentMessage}\x1b[0m`)
-    this.stylePrefix = ''
-    this.message = ''
+    currentMessage = newMessage
+    console.log(`${message}${stylePrefix}${currentMessage}\x1b[0m`)
+    stylePrefix = ''
+    message = ''
     return this
   }
 }
