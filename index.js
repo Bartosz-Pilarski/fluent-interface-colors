@@ -2,5 +2,5 @@ import Colors from "./src/colors.js"
 
 const colors = new Colors()
 
-colors.red().log("Hello world")
-colors.underline().log("Reusability")
+colors.italic().blue().log("Hello world")
+colors.bold().underline().log("Reusability")
