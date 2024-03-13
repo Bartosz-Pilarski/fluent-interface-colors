@@ -37,4 +37,6 @@ colors.red.bold.then("Hello").blue.italic.log(" world!")
 //Keep styling for the next segment
 colors.red.bold.and("Hello ").blue.italic.log("world!")
 ```
+![preview2](https://github.com/Bartosz-Pilarski/fluent-interface-colors/assets/86968046/65879b45-90cb-4afb-9112-6126b658ccb9)
+
 *Spaces are not added automatically between strings.*
