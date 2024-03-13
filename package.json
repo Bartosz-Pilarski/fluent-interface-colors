@@ -1,6 +1,6 @@
 {
   "name": "fluent-interface-colors",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "JavaScript fluent interface pattern implementation done with coloring for console messages",
   "main": "src/colors.js",
   "scripts": {
