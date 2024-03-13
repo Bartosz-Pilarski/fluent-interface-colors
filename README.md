@@ -19,17 +19,19 @@ This is a small educational project that:
 
 ## Usage
 
-Import the project's code
+1. Import the project's code
 ```javascript
 const colors = require("fluent-interface-colors")
 ```
-Start logging messages
+2. Start logging messages
 ```javascript
 colors.red.bold.log("Hello world!")
 ```
 ![preview](https://github.com/Bartosz-Pilarski/fluent-interface-colors/assets/86968046/494fadb9-2a6e-4464-8b13-b498d448bc5b)
 
-To use multiple styles per line simply use the .then(message) and .and(message) methods
+### More
+
+- To use multiple styles per line simply use the .then(message) and .and(message) methods
 ```javascript
 //Reset style for the next segment
 colors.red.bold.then("Hello").blue.italic.log(" world!")
@@ -40,7 +42,7 @@ colors.red.bold.and("Hello ").blue.italic.log("world!")
 
 *Spaces are not added automatically between strings.*
 
-To preformat a message and have it ready to print from the console (or formatted further) somewhere else, use the format(message) method
+- To preformat a message and have it ready to print from the console (or formatted further) somewhere else, use the format(message) method
 ```javascript
 const formatted = colors.bold.format("Preformatted message")
 console.log(formatted)
