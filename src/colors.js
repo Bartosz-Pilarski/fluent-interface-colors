@@ -7,6 +7,11 @@ function colors() {
   let stylePrefix = ''
 
   const colors = {
+    //Format and return the current message without logging it.
+    //This can not be chained.
+    format(...messages) {
+      return `${message}${stylePrefix}${messages.join("")}\x1b[0m`
+    },
     //Finalize all messages and render to console
     log: (...messages) => {
       console.log(`${message}${stylePrefix}${messages.join("")}\x1b[0m`)

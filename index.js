@@ -5,6 +5,11 @@ colors.red.bold.then("Hello").blue.italic.log(" world!")
 //Keep styling for the next segment
 colors.red.bold.and("Hello ").blue.italic.log("world!")
 
+//Preformatting messages
+const formatted = colors.bold.format("Preformatted message")
+console.log(formatted)
+colors.underline.magenta.log(formatted)
+
 colors.log('Colors displayed as:')
 colors.italic.log('Standard')
 colors.italic.log('Bold')
