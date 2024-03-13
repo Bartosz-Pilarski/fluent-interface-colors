@@ -8,21 +8,21 @@ function colors() {
 
   const colors = {
     //Finalize all messages and render to console
-    log: (newMessage) => {
-      console.log(`${message}${stylePrefix}${newMessage}\x1b[0m`)
+    log: (...messages) => {
+      console.log(`${message}${stylePrefix}${messages.join("")}\x1b[0m`)
       stylePrefix = ''
       message = ''
       return colors
     },
     //Lock in current message and styling, and reset styles for the next message.
-    then: (newMessage) => {
-      message += `${stylePrefix}${newMessage}\x1b[0m`
+    then: (...messages) => {
+      message += `${stylePrefix}${messages.join("")}\x1b[0m`
       stylePrefix = ''
       return colors
     },
     //Lock in current message and styling without resetting styles
-    and: (newMessage) => {
-      message += `${stylePrefix}${newMessage}`
+    and: (...messages) => {
+      message += `${stylePrefix}${messages.join("")}`
       return colors
     }
   }
