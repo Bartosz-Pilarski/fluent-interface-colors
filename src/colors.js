@@ -1,6 +1,6 @@
-import ansi from "./ansiCodes.js"
+const ansi = require("./ansiCodes.js")
 
-export default function() {
+function colors() {
   //Message history stack
   let message = ''
   //Message currently styled
@@ -39,3 +39,5 @@ export default function() {
 
   return colors
 }
+
+module.exports = colors()

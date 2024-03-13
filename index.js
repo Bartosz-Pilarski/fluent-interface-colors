@@ -1,6 +1,4 @@
-import Colors from "./src/colors.js"
-
-const colors = Colors()
+const colors = require("./src/colors.js")
 
 //Reset style for the next segment
 colors.red.bold.then("Hello").blue.italic.log(" world!")

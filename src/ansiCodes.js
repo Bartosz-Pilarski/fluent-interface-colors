@@ -45,4 +45,4 @@ const ansi = {
   'bbgwhite': '\x1b[107m'
 }
 
-export default ansi
+module.exports = ansi
