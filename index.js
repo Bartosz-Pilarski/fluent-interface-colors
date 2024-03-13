@@ -2,7 +2,10 @@ import Colors from "./src/colors.js"
 
 const colors = Colors()
 
-colors.bold.red.and('Hello ').blue.log('World!')
+//Reset style for the next segment
+colors.red.bold.then("Hello").blue.italic.log(" world!")
+//Keep styling for the next segment
+colors.red.bold.and("Hello ").blue.italic.log("world!")
 
 colors.log('Colors displayed as:')
 colors.italic.log('Standard')

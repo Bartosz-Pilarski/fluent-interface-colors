@@ -35,6 +35,6 @@ To use multiple styles per line simply use the .then(message) and .and(message) 
 //Reset style for the next segment
 colors.red.bold.then("Hello").blue.italic.log(" world!")
 //Keep styling for the next segment
-colors.red.bold.and("Hello ").blue.log("world!")
+colors.red.bold.and("Hello ").blue.italic.log("world!")
 ```
 *Spaces are not added automatically between strings.*
