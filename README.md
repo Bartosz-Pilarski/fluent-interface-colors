@@ -19,10 +19,9 @@ This is a small educational project that:
 
 ## Usage
 
-Import and instance the project's code (src/colors.js file)
+Import the project's code
 ```javascript
-import Colors from "./src/colors.js"
-const colors = Colors()
+const colors = require("fluent-interface-colors")
 ```
 Start logging messages
 ```javascript
