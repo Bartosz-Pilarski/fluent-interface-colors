@@ -49,3 +49,27 @@ console.log(formatted)
 //To add onto the message styles simply wrap it in another chain
 colors.underline.magenta.log(formatted)
 ```
+### Full list of colors and styles
+- Colors:
+  - black,
+  - red,
+  - green,
+  - yellow,
+  - blue,
+  - magenta,
+  - cyan,
+  - white.
+
+*You can prefix all of the above with:*
+  - b for bold, or bright, (e.g., bgreen),
+  - bg for background (e. g., bgred),
+  - bbg for both (e. g. bbgmagenta).
+  
+-Styles:
+  - bold,
+  - dim,
+  - italic,
+  - underline,
+  - inverse,
+  - hidden (invisible),
+  - strikethrough.
